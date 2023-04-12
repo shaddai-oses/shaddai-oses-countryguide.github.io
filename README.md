@@ -26,3 +26,5 @@ Requirements
 Modern and up-to-date web browser
 
 https://shaddai-oses.github.io/shaddai-oses-countryguide.github.io/
+
+![SharedScreenshot](https://user-images.githubusercontent.com/124713917/231599077-3e9ab0eb-c440-4b95-8c5c-bb018aeb33c9.jpg)
