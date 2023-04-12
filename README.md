@@ -1,5 +1,3 @@
-# shaddai-oses-countryguide.github.io
-
 COUNTRY GUIDE
 
 Country Information Finder
@@ -26,3 +24,5 @@ JS
 Requirements
 
 Modern and up-to-date web browser
+
+https://shaddai-oses.github.io/shaddai-oses-countryguide.github.io/
