@@ -1,0 +1,313 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+}
+
+h1, h2, h3, h4, p, span {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  max-height: fit-content;
+  max-width: 100%;
+  min-width: fit-content;
+  font-family: 'Poppins', sans-serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* para la animacion del fondo */
+
+body {
+  background:radial-gradient(ellipse at center, rgba(255,254,234,1) 0%, rgba(255,254,234,1) 35%, #B7E8EB 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.ocean { 
+ height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #015871;
+  z-index: -1;
+}
+
+.wave {
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/85486/wave.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 3s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+  z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 1;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
+@keyframes swell {
+  0%, 100% {
+    transform: translate3d(0,-25px,0);
+  }
+  50% {
+    transform: translate3d(0,5px,0);
+  }
+}
+/* para la animacion del fondo */
+
+/* Personalizar el estilo del scroll en navegadores webkit */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4d7a85;
+  border-radius: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #89a0bd98;
+}
+
+#titulo {
+    font-size: 2.5rem;
+    color: #015871;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#container {
+    width: 18rem;
+    background-color: #015871;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(21, 21, 21, 0.6274509804);
+    margin: 0;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#input-country {
+    padding: 0.6rem;
+    width: 10rem;
+    border: none;
+    border-bottom: 3px solid dodgerblue;
+    outline: none;
+    font-size: 0.8rem;
+    border-radius: 0.8rem; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: dodgerblue;
+}
+
+#btn-search {
+    padding: 8px 10px;
+    border-radius: 1rem;
+    letter-spacing: 0.1rem;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    font-weight: 700;
+    background-color: dodgerblue;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+#btn-search:hover {
+    background-color: rgb(69, 157, 245);
+}
+
+#results {
+  padding: 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+#advice {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #015871;
+}
+
+.svg-h2 {
+  /* width: calc(50% - 1rem); utilizar los calc para lo de como se veran las banderas en tablet y tlfn */
+  height: 15rem;
+  width: 18rem;
+  background-color: #015871;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 1rem;
+  box-shadow: 0px 10px 15px rgba(21, 21, 21, 0.6274509804);
+  word-break: break-all;
+}
+
+.tittle-h2 {
+  word-break: keep-all;
+  text-align: center;
+}
+
+.tittle-h2-p {
+  word-break: keep-all;
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+.content-p {
+  font-weight: 500;
+}
+
+.flags {
+  border-radius: 10px;
+  width: 14rem;
+  height: 8rem;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0px 10px 15px rgba(21, 21, 21, 0.6274509804);
+}
+
+.container-flags {
+  background-color: #015871;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  text-align: center;
+  box-shadow: 0px 10px 15px rgba(21, 21, 21, 0.6274509804)
+}
+
+.temp {
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.icon-weather {
+  width: 5rem;
+  height: 5rem;
+}
+
+
+@media(min-width: 650px) {
+  #titulo {
+    font-size: 4rem;
+    color: #015871;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#container {
+    width: 30rem;
+    background-color: #015871;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 10px 15px rgba(21, 21, 21, 0.6274509804);
+    margin: 0;
+}
+
+#search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#input-country {
+    padding: 0.6rem;
+    width: 18rem;
+    border: none;
+    border-bottom: 3px solid dodgerblue;
+    outline: none;
+    font-size: 1rem;
+    border-radius: 0.8rem; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: dodgerblue;
+}
+
+#btn-search {
+    padding: 10px 20px;
+    border-radius: 1rem;
+    letter-spacing: 0.1rem;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    outline: none;
+    font-weight: 700;
+    background-color: dodgerblue;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+
+#results {
+  max-width: 60rem;
+  padding: 2rem;
+  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#advice {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  color: #015871;
+}
+
+}
